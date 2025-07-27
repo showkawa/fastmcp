@@ -1,0 +1,44 @@
+{
+  "name": "precious-metal-mcp",
+  "version": "1.0.0",
+  "description": "An MCP tool to get precious metal prices.",
+  "main": "dist/index.js",
+  "bin": {
+    "precious-metal-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<YOUR_USERNAME>/precious-metal-mcp.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "test": "vitest run"
+  },
+  "keywords": [
+    "mcp",
+    "fintech",
+    "gold",
+    "silver"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "dotenv": "^17.2.1",
+    "fastmcp": "^1.0.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "vitest": "^3.2.4"
+  }
+}
