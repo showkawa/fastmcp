@@ -17,7 +17,7 @@ export const TROY_OUNCE_TO_GRAMS = 31.1034768;
 // --- FastMCP Server Setup ---
 const server = new FastMCP({
   name: "PreciousMetalPrice",
-  version: "1.0.0",
+  version: "1.0.1",
 });
 
 const getPreciousMetalPriceParams = z.object({
