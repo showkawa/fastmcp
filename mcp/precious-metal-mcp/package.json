@@ -1,6 +1,6 @@
 {
   "name": "precious-metal-mcp",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An MCP tool to get precious metal prices.",
   "main": "dist/index.js",
   "bin": {

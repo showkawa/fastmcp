@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import "dotenv/config";
 import axios from "axios";
 import { FastMCP } from "fastmcp";
@@ -17,7 +16,7 @@ export const TROY_OUNCE_TO_GRAMS = 31.1034768;
 // --- FastMCP Server Setup ---
 const server = new FastMCP({
   name: "PreciousMetalPrice",
-  version: "1.0.1",
+  version: "1.0.2",
 });
 
 const getPreciousMetalPriceParams = z.object({
@@ -111,7 +110,7 @@ export async function getPreciousMetalPriceLogic(args: {
 
     if (typeof exchangeRate !== "number" || exchangeRate === 0) {
       throw new Error(
-        `Could not fetch a valid exchange rate for ${exchangeSymbol}.`
+        `Could not fetch a valid exchange rate for ${exchangeSymbol}.`,
       );
     }
 
@@ -172,7 +171,7 @@ async function main() {
   if (!apiKey) {
     console.error("Error: FINNHUB_API_KEY environment variable not set.");
     console.error(
-      "Please create a .env file and add FINNHUB_API_KEY=<your_key>"
+      "Please create a .env file and add FINNHUB_API_KEY=<your_key>",
     );
     process.exit(1);
   }
