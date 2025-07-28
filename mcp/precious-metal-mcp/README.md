@@ -30,11 +30,11 @@ This tool requires the `FINNHUB_API_KEY` environment variable to be set. You can
 1. In the root directory of this project, create a file named `.env`.
 2. Add the following line to the file, replacing `your_api_key_here` with your actual key:
 
-    ```
-    FINNHUB_API_KEY=your_api_key_here
-    ```
+   ```
+   FINNHUB_API_KEY=your_api_key_here
+   ```
 
-    The `.gitignore` file is configured to prevent the `.env` file from being committed to your repository.
+   The `.gitignore` file is configured to prevent the `.env` file from being committed to your repository.
 
 ### Option B: System Environment Variable (Recommended for production)
 
@@ -42,15 +42,15 @@ Set the environment variable directly in your operating system's shell.
 
 - **Linux / macOS:**
 
-    ```bash
-    export FINNHUB_API_KEY=your_api_key_here
-    ```
+  ```bash
+  export FINNHUB_API_KEY=your_api_key_here
+  ```
 
 - **Windows (PowerShell):**
 
-    ```powershell
-    $env:FINNHUB_API_KEY="your_api_key_here"
-    ```
+  ```powershell
+  $env:FINNHUB_API_KEY="your_api_key_here"
+  ```
 
 ## Installation and Usage
 
@@ -76,6 +76,14 @@ npm run build
 
 This will create the compiled output in the `/dist` directory.
 
+### Code Formatting
+
+To ensure consistent code style, please run Prettier before committing changes:
+
+```bash
+npx prettier --write .
+```
+
 ### Running as a Tool
 
 Once built, you can run the tool via its `bin` entry (assuming it's been linked globally with `npm link` or published to npm):
@@ -94,24 +102,24 @@ precious-metal-mcp
   - `market` (string, required): The trading market. Can be `"new_york"`, `"london"`, or `"shanghai"`.
 - **Example Output**:
 
-    ```json
-    {
-      "metal": "gold",
-      "type": "spot",
-      "market": "new_york",
-      "original_price": {
-        "value": 2350.55,
-        "unit": "USD/oz"
-      },
-      "converted_price": {
-        "value": 558.85,
-        "unit": "CNY/gram"
-      },
-      "exchange_rate": {
-        "from": "USD",
-        "to": "CNY",
-        "rate": 7.25
-      },
-      "timestamp": "2023-10-28T10:00:00.000Z"
-    }
-    ```
+  ```json
+  {
+    "metal": "gold",
+    "type": "spot",
+    "market": "new_york",
+    "original_price": {
+      "value": 2350.55,
+      "unit": "USD/oz"
+    },
+    "converted_price": {
+      "value": 558.85,
+      "unit": "CNY/gram"
+    },
+    "exchange_rate": {
+      "from": "USD",
+      "to": "CNY",
+      "rate": 7.25
+    },
+    "timestamp": "2023-10-28T10:00:00.000Z"
+  }
+  ```

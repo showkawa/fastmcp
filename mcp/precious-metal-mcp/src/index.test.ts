@@ -33,7 +33,7 @@ describe("getPreciousMetalPriceLogic", () => {
           return Promise.resolve({ data: { c: 7.2 } }); // Exchange rate: 7.2 CNY/USD
         }
         return Promise.reject(new Error("Unexpected API call"));
-      }
+      },
     );
 
     const args = {
@@ -65,7 +65,7 @@ describe("getPreciousMetalPriceLogic", () => {
 
     // Act & Assert: Expect the function to throw an error
     await expect(getPreciousMetalPriceLogic(args)).rejects.toThrow(
-      "API is down"
+      "API is down",
     );
   });
 
@@ -81,7 +81,7 @@ describe("getPreciousMetalPriceLogic", () => {
 
     // Act & Assert
     await expect(getPreciousMetalPriceLogic(args)).rejects.toThrow(
-      "Could not fetch a valid price for symbol OANDA:XAU_USD"
+      "Could not fetch a valid price for symbol OANDA:XAU_USD",
     );
   });
 });

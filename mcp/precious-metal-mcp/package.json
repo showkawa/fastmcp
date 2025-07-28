@@ -1,6 +1,6 @@
 {
   "name": "precious-metal-mcp",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "An MCP tool to get precious metal prices.",
   "main": "dist/index.js",
   "bin": {
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<YOUR_USERNAME>/precious-metal-mcp.git"
+    "url": "git+https://github.com/showkawa/fastmcp/precious-metal-mcp.git"
   },
   "scripts": {
     "build": "tsc",
